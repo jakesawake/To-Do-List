@@ -16,26 +16,58 @@ body {
   background-color: #0f0f1e;
 }
 
-.current-folder > h1 {
+.current-folder {
   color: #c26bff;
+  grid-area: current-folder;
 }
 
 .container {
   display: grid;
   grid-template-areas:
-    ". add-note-btn ."
-    "sidebar . .";
+    "top-section"
+    "bottom-section";
   height: 80vh;
   width: 80vh;
-  margin: 5rem;
+  margin: 2rem;
   border: 1px solid purple;
 }
 
-.addNoteBtnContainer {
-  place-self: center;
+.top-section {
+  display: inline-grid;
+  grid-template-areas: "add-note-btn current-folder";
+  grid-area: top-section;
+  margin-top: 2rem;
+  width: 80vh;
+  height: 10vh;
 }
 
 .addNoteBtn {
-  width: 3rem;
-  height: 3rem;
+  grid-area: add-note-btn;
+  margin-top: 1.5rem;
+  margin-left: 5rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.bottom-section {
+  display: grid;
+  grid-template-areas: "sidebar item-container";
+  grid-area: bottom-section;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  border: 1px solid purple;
+  width: 20vh;
+  height: 50vh;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+.item-container {
+  grid-area: item-container;
+  border: 1px solid purple;
+  margin-top: 2rem;
+  height: 50vh;
+  width: 50vh;
 }
