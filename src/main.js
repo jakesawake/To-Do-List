@@ -1,14 +1,14 @@
+// if hot reload doesn't work use the code below
+if (import.meta.hot) {
+  import.meta.hot.accept(() => {
+    console.log("HMR updated main.js");
+  });
+}
 import "./style.css";
 import "./to-do-item.js";
+import "./add-item.js";
 import "./display-items.js";
-import "./add-reminder.js";
-import { addNote } from "./add-reminder.js";
-
-const container = document.querySelector(".container");
-const itemContainer = document.querySelector(".item-container");
-const sidebar = document.querySelector(".sidebar");
-const addNoteBtn = document.querySelector(".addNoteBtn");
+import "./to-do-item-formatter.js";
+import { addNote } from "./add-item.js";
 
 addNote();
-
-export { container, itemContainer, sidebar, addNoteBtn };
