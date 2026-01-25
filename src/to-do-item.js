@@ -14,6 +14,15 @@ const testItem = new toDoItem(
   "Buy flowers for Marcui",
   "Today at 5:00PM",
   "Med",
+  "She likes Tulips",
 );
 
-export { toDoItem };
+const testItem2 = new toDoItem(
+  "Get Gas",
+  "Go to Petro Canada",
+  "Tomorrow, at 9:00AM",
+  "High",
+  "Get car wash too",
+);
+
+export { toDoItem, testItem, testItem2 };
